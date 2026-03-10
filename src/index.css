@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7.1%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 59 100% 50%;
+    --primary-foreground: 0 0% 7.1%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 174 100% 41%;
+    --accent-foreground: 0 0% 7.1%;
+
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 59 100% 50%;
+
+    --radius: 0.375rem;
+
+    --success: 174 100% 41%;
+    --success-foreground: 0 0% 7.1%;
+
+    --font-mono: 'Roboto Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 59 100% 50%;
+    --sidebar-primary-foreground: 0 0% 7.1%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 59 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .text-success {
+    color: hsl(var(--success));
+  }
+  .bg-carbon {
+    background-color: hsl(var(--background));
+  }
+  .bg-mechanical {
+    background-color: hsl(var(--card));
+  }
+  .border-mechanical {
+    border-color: hsl(var(--border));
+  }
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
